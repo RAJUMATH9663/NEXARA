@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["bom1"],
+  "env": {
+    "NEXT_PUBLIC_EMAILJS_SERVICE_ID": "@emailjs_service_id",
+    "NEXT_PUBLIC_EMAILJS_TEMPLATE_ID": "@emailjs_template_id",
+    "NEXT_PUBLIC_EMAILJS_PUBLIC_KEY": "@emailjs_public_key",
+    "NEXT_PUBLIC_API_BASE_URL": "@api_base_url",
+    "NEXT_PUBLIC_WHATSAPP_NUMBER": "@whatsapp_number"
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    }
+  ]
+}
