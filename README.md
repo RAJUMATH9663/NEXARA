@@ -1,192 +1,36 @@
-# 🚀 Nexara — Professional Technology Company Website
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-> **Innovating the Future, One Solution at a Time.**
+## Getting Started
 
-A complete, production-ready website for Nexara built with **Next.js 14**, **Tailwind CSS**, **Framer Motion**, and a **Django REST Framework** backend.
-
----
-
-## 🌐 Live Demo
-
-**Frontend:** Deploy to Vercel at [nexara.vercel.app](https://nexara.vercel.app)
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Frontend | Next.js 14 (App Router) + TypeScript |
-| Styling | Tailwind CSS with custom design tokens |
-| Animations | Framer Motion |
-| Icons | Lucide React |
-| Backend | Django REST Framework |
-| Database | MongoDB (via djmongo) |
-| Auth | JWT (SimpleJWT) |
-| Deployment | Vercel (frontend) |
-
----
-
-## 📁 Project Structure
-
-```
-NEXARA/
-├── nexara-site/          # Next.js Frontend
-│   ├── app/              # App Router pages
-│   │   ├── about/
-│   │   ├── services/
-│   │   ├── portfolio/
-│   │   ├── pricing/
-│   │   ├── blog/
-│   │   ├── careers/
-│   │   ├── contact/
-│   │   ├── login/
-│   │   ├── register/
-│   │   ├── layout.tsx    # Root layout + SEO
-│   │   ├── page.tsx      # Home page
-│   │   ├── sitemap.ts    # Auto-generated sitemap
-│   │   └── robots.ts     # robots.txt
-│   ├── components/
-│   │   ├── sections/     # Page sections
-│   │   ├── Navbar.tsx
-│   │   ├── Footer.tsx
-│   │   ├── ThemeProvider.tsx
-│   │   ├── ScrollToTop.tsx
-│   │   ├── WhatsAppButton.tsx
-│   │   ├── CookieBanner.tsx
-│   │   └── SectionHeader.tsx
-│   ├── public/
-│   │   └── logo.png
-│   ├── .env.example      # Environment variables template
-│   ├── vercel.json       # Vercel deployment config
-│   └── tailwind.config.ts
-└── backend/              # Django REST Backend
-    ├── nexara_api/       # Django project config
-    ├── apps/
-    │   ├── contacts/     # Contact form API
-    │   ├── blog/         # Blog CMS API
-    │   ├── portfolio/    # Portfolio CMS API
-    │   ├── auth_users/   # JWT Auth API
-    │   └── newsletter/   # Newsletter API
-    └── requirements.txt
-```
-
----
-
-## ⚡ Quick Start (Frontend)
+First, run the development server:
 
 ```bash
-# Navigate to frontend
-cd nexara-site
-
-# Copy environment variables
-cp .env.example .env.local
-# Edit .env.local with your values
-
-# Install dependencies (already done)
-npm install
-
-# Run development server
 npm run dev
-# → Open http://localhost:3000
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🔧 Environment Variables
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Copy `.env.example` to `.env.local` and fill in:
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-| Variable | Description |
-|---|---|
-| `NEXT_PUBLIC_EMAILJS_SERVICE_ID` | EmailJS service ID |
-| `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` | EmailJS template ID |
-| `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY` | EmailJS public key |
-| `NEXT_PUBLIC_API_BASE_URL` | Django backend URL |
-| `NEXT_PUBLIC_WHATSAPP_NUMBER` | WhatsApp number (with country code) |
-| `NEXT_PUBLIC_GOOGLE_MAPS_KEY` | Google Maps API key |
+## Learn More
 
----
+To learn more about Next.js, take a look at the following resources:
 
-## 🐍 Backend Setup (Django)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-```bash
-# Navigate to backend
-cd backend
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-# Create virtual environment
-python -m venv venv
-venv\Scripts\activate  # Windows
+## Deploy on Vercel
 
-# Install dependencies
-pip install -r requirements.txt
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-# Copy environment variables
-cp .env.example .env
-
-# Run migrations
-python manage.py migrate
-
-# Create superuser
-python manage.py createsuperuser
-
-# Run development server
-python manage.py runserver
-# → API at http://localhost:8000/api/
-```
-
-### API Endpoints
-
-| Endpoint | Method | Description |
-|---|---|---|
-| `/api/auth/token/` | POST | Get JWT token |
-| `/api/auth/token/refresh/` | POST | Refresh JWT token |
-| `/api/auth/register/` | POST | Create account |
-| `/api/contacts/` | POST | Submit contact form |
-| `/api/blog/` | GET | List blog posts |
-| `/api/blog/<slug>/` | GET | Get blog post |
-| `/api/portfolio/` | GET | List projects |
-| `/api/newsletter/subscribe/` | POST | Subscribe to newsletter |
-
----
-
-## 🚀 Deploy to Vercel
-
-1. Push code to GitHub
-2. Import project at [vercel.com](https://vercel.com)
-3. Set environment variables in Vercel dashboard
-4. Deploy! ✨
-
----
-
-## 🎨 Features
-
-- ✅ **Responsive Design** — Mobile-first, works on all devices
-- ✅ **Dark Mode** — Toggle with persistence via localStorage
-- ✅ **Animations** — Smooth Framer Motion transitions throughout
-- ✅ **SEO Optimized** — Meta tags, OG tags, Twitter cards, sitemap, robots.txt
-- ✅ **Accessibility** — WCAG compliant, keyboard navigation, ARIA labels
-- ✅ **Security** — Security headers, CSRF, XSS protection
-- ✅ **10 Services** — Full services section with icons
-- ✅ **Filterable Portfolio** — Projects filtered by category
-- ✅ **Testimonials Carousel** — Auto-cycling with nav controls
-- ✅ **FAQ Accordion** — Animated expandable questions
-- ✅ **Contact Form** — With EmailJS integration point
-- ✅ **WhatsApp Button** — Floating with pulse animation
-- ✅ **Cookie Banner** — GDPR-compliant
-- ✅ **Newsletter** — Footer + popup subscription
-- ✅ **Login/Register** — JWT auth pages
-- ✅ **Pricing Plans** — Starter, Professional, Enterprise
-
----
-
-## 📞 Contact
-
-**Nexara Technologies**
-- 📧 hello@nexara.in
-- 📍 Bengaluru, Karnataka, India
-- 🌐 nexara.vercel.app
-
----
-
-*Built with ❤️ by the Nexara Team*
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
