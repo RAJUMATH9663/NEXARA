@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/admin/", "/_next/", "/login", "/register"],
       },
     ],
-    sitemap: "https://nexara.vercel.app/sitemap.xml",
-    host: "https://nexara.vercel.app",
+    sitemap: "https://nexara-tech.vercel.app/sitemap.xml",
+    host: "https://nexara-tech.vercel.app",
   };
 }

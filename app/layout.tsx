@@ -9,7 +9,7 @@ import CookieBanner from "@/components/CookieBanner";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nexara.vercel.app"),
+  metadataBase: new URL("https://nexara-tech.vercel.app"),
   title: {
     default: "Nexara | Innovating the Future, One Solution at a Time",
     template: "%s | Nexara",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://nexara.vercel.app",
+    url: "https://nexara-tech.vercel.app",
     siteName: "Nexara",
     title: "Nexara | Innovating the Future, One Solution at a Time",
     description:
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "google07b99ac8ae838322",
   },
 };
 
@@ -99,8 +99,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Nexara",
-              url: "https://nexara.vercel.app",
-              logo: "https://nexara.vercel.app/logo.png",
+              url: "https://nexara-tech.vercel.app",
+              logo: "https://nexara-tech.vercel.app/logo.png",
               description:
                 "Nexara delivers web development, mobile applications, AI solutions, and digital transformation.",
               address: {
