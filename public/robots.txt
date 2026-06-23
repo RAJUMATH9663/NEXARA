@@ -1,0 +1,10 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /login
+Disallow: /register
+
+Host: https://nexara-tech.vercel.app
+Sitemap: https://nexara-tech.vercel.app/sitemap.xml
